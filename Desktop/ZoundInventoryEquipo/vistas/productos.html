@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoundInventory - Catálogo de Productos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <header class="encabezado-modulo">
+            <h1>Productos e Inventario</h1>
+            <p>Consulta el listado completo</p>
+        </header>
+
+        <section class="barra-filtros">
+            <div class="control-busqueda">
+                <label for="buscar-nombre">Buscar Producto:</label>
+                <input type="text" id="buscar-nombre" placeholder="Ej. Monitor, Teclado...">
+            </div>
+
+            <div class="control-busqueda">
+                <label for="filtrar-categoria">Filtrar por Categoría:</label>
+                <select id="filtrar-categoria">
+                    <option value="todas">Todas las categorías</option>
+                    <option value="Cat1">Categoría 1</option>
+                    <option value="Cat2">Categoría 2</option>
+                    <option value="Cat3">Categoría 3</option>
+                    <option value="Cat4">Categoría 4</option>
+                    <option value="Cat5">Categoría 5</option>
+                    <option value="Cat6">Categoría 6</option>
+                    <option value="Cat7">Categoría 7</option>
+                    <option value="Cat8">Categoría 8</option>
+                    <option value="Cat9">Categoría 9</option>
+                    <option value="Cat10">Categoría 10</option>
+                    <option value="Cat11">Categoría 11</option>
+                    <option value="Cat12">Categoría 12</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="seccion-catalogo">
+            <div class="cuadricula-productos" id="contenedor-tarjetas">
+            </div>
+        </section>
+    </div>
+
+    <script src="../js/ver-productos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoundInventory - Entradas y Salidas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <header class="encabezado-modulo">
+            <h1>Registro de Movimientos de Mercancía</h1>
+            <p>Gestiona las entradas y los despachos tecnológicos del sistema.</p>
+        </header>
+
+        <main class="contenido-movimientos">
+            <section class="formulario-section">
+                <h2>Nuevo Movimiento</h2>
+                <form id="form-movimiento">
+                    <div class="form-group">
+                        <label for="select-producto">Seleccionar Producto:</label>
+                        <select id="select-producto" required>
+                            <option value="">Cargando catálogo...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-movimiento">Tipo de Movimiento:</label>
+                        <select id="tipo-movimiento" required>
+                            <option value="">Seleccione una acción...</option>
+                            <option value="entrada">Entrada (Ingreso a bodega)</option>
+                            <option value="salida">Salida (Despacho de mercancía)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad a mover:</label>
+                        <input type="number" id="cantidad" min="1" required placeholder="Ej. 15">
+                    </div>
+
+                    <button type="submit" class="btn-guardar">Registrar Movimiento</button>
+                </form>
+            </section>
+
+            <hr>
+
+            <section class="listado-section">
+                <h2>Estado Actual de la Bodega</h2>
+                <table class="tabla-inventario">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del Producto</th>
+                            <th>Categoría</th>
+                            <th>Stock Disponible</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-stock">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/movimientos.js"></script>
+</body>
+
+</html>

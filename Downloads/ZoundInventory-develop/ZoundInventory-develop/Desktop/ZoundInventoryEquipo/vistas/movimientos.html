@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoundInventory - Entradas y Salidas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <div class="row g-0">
+        <div class="col-md-3 col-lg-2">
+            <nav class="sidebar p-3">
+                <div class="sidebar-wrapper">
+                    <div>
+                        <h4 class="text-music fw-bold text-center mb-4 mt-2">ZoundInventory</h4>
+                        <ul class="nav flex-column gap-2">
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="dashboard.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="perfil.html">Mi Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="proveedores.html">Proveedores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="alertas.html">Alertas Stock</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="actualizarproducto.html">Actualizar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="agregarproductos.html">Agregar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="crud.html">CRUD</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold bg-secondary bg-opacity-25 rounded p-2" href="movimientos.html">Importadores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="productos.html">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <a id="btnLogout" class="nav-link text-danger p-2 fw-bold text-center border border-danger border-opacity-25 rounded bg-danger bg-opacity-10" href="#">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+            <main class="main-content-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center pb-2 mb-4 border-bottom border-secondary">
+                    <h1 class="h2 fw-bold">Registro de Movimientos de Mercancía</h1>
+                    <span class="badge bg-music-dark p-2 border border-secondary text-white">Módulo Inventario</span>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="card card-custom p-4 h-100">
+                            <h2 class="h4 fw-bold mb-3 text-music">Nuevo Movimiento</h2>
+                            <form id="form-movimiento">
+                                <div class="mb-3">
+                                    <label for="select-producto" class="form-label text-white-50 small fw-bold">Seleccionar Producto:</label>
+                                    <select id="select-producto" class="form-select bg-dark text-white border-secondary" required>
+                                        <option value="">Cargando catálogo...</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="tipo-movimiento" class="form-label text-white-50 small fw-bold">Tipo de Movimiento:</label>
+                                    <select id="tipo-movimiento" class="form-select bg-dark text-white border-secondary" required>
+                                        <option value="">Seleccione una acción...</option>
+                                        <option value="entrada">Entrada (Ingreso a bodega)</option>
+                                        <option value="salida">Salida (Despacho de mercancía)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="cantidad" class="form-label text-white-50 small fw-bold">Cantidad a mover:</label>
+                                    <input type="number" id="cantidad" class="form-control bg-dark text-white border-secondary" min="1" required placeholder="Ej. 15">
+                                </div>
+
+                                <button type="submit" class="btn btn-music w-100 fw-bold py-2">Registrar Movimiento</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="card card-custom p-4 h-100">
+                            <h2 class="h4 fw-bold mb-3 text-white">Estado Actual de la Bodega</h2>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle m-0 text-white">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre del Producto</th>
+                                            <th>Categoría</th>
+                                            <th>Stock Disponible</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-stock">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/movimientos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

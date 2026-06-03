@@ -1,0 +1,87 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "David Vergara",
+      "correo": "david@harvic.com",
+      "contrasena": "123456"
+    },
+    {
+      "id": "2",
+      "nombre": "Usuario Prueba",
+      "correo": "prueba@harvic.com",
+      "contrasena": "admin123"
+    },
+    {
+      "correo": "david23@gmail.com",
+      "contrasena": "1234",
+      "nombre": "david23",
+      "id": "K09tHhyeWgY"
+    },
+    {
+      "correo": "david23@gmail.com",
+      "contrasena": "1234",
+      "nombre": "david23",
+      "id": "aOsxMQ6-AVI"
+    },
+    {
+      "nombre": "raul jimenez",
+      "correo": "raul1@gmail.com",
+      "contrasena": "4321",
+      "id": "XarAahZNb6c"
+    }
+  ],
+  "proveedores": [
+    {
+      "id": "1",
+      "nit": "901.452.112-4",
+      "nombre_empresa": "Corsair Latam Distribuciones",
+      "direccion": "Av. Eldorado #68C-24, Bogotá",
+      "telefono": "+57 311 555 1234",
+      "correo": "mayoristas@corsair.co",
+      "categoria": "Teclados y Mouses"
+    },
+    {
+      "id": "2",
+      "nit": "800.198.334-0",
+      "nombre_empresa": "Razer Colombia Import",
+      "direccion": "Calle 100 #19-54, Of. 402, Bogotá",
+      "telefono": "+57 315 444 5678",
+      "correo": "latam.sales@razer.com",
+      "categoria": "Componentes y Audio"
+    },
+    {
+      "id": "3",
+      "nit": "900.721.055-9",
+      "nombre_empresa": "Asus Wholesale Bogotá",
+      "direccion": "Carrera 15 #78-22, Local 12, Bogotá",
+      "telefono": "+57 320 999 8888",
+      "correo": "canales@asus.com.co",
+      "categoria": "Monitores y Pantallas"
+    }
+  ],
+  "productos": [
+    {
+      "id": "SKU-101",
+      "nombre": "Teclado Mecánico K65 RGB Mini",
+      "marca": "Corsair",
+      "stock_actual": 3,
+      "stock_minimo": 10
+    },
+    {
+      "id": "SKU-102",
+      "nombre": "Mouse Óptico DeathAdder V3 Pro",
+      "marca": "Razer",
+      "stock_actual": 18,
+      "stock_minimo": 5
+    },
+    {
+      "id": "SKU-103",
+      "nombre": "Monitor Gamer ROG Strix 27'",
+      "marca": "Asus",
+      "stock_actual": 1,
+      "stock_minimo": 4
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

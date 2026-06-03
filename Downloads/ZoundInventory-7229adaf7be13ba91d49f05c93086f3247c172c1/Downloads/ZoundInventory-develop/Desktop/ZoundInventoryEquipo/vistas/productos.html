@@ -5,49 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZoundInventory - Catálogo de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
-    <div class="contenedor-principal">
-        <header class="encabezado-modulo">
-            <h1>Productos e Inventario</h1>
-            <p>Consulta el listado completo</p>
-        </header>
+    <div class="row g-0">
+        <div class="col-md-3 col-lg-2">
+            <nav class="sidebar p-3">
+                 <div class="sidebar-wrapper">
+                    <div>
+                        <h4 class="text-music fw-bold text-center mb-4 mt-2">ZoundInventory</h4>
+                        <ul class="nav flex-column gap-2">
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="dashboard.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="perfil.html">Mi Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="proveedores.html">Proveedores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="alertas.html">Alertas Stock</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./actualizarproducto.html">Actualizar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./agregarproductos.html">Agregar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./crud.html">CRUD</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./movimientos.html">Importadores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold bg-secondary bg-opacity-25 rounded p-2" href="./productos.html">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger p-2 fw-bold text-center border border-danger border-opacity-25 rounded bg-danger bg-opacity-10" href="../index.html">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
-        <section class="barra-filtros">
-            <div class="control-busqueda">
-                <label for="buscar-nombre">Buscar Producto:</label>
-                <input type="text" id="buscar-nombre" placeholder="Ej. Monitor, Teclado...">
-            </div>
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+            <main class="main-content-fluid">
+                <div class="d-flex justify-content-between align-items-center pb-2 mb-4 border-bottom border-secondary">
+                    <h1 class="h2 fw-bold">Productos e Inventario</h1>
+                    <span class="badge bg-music-dark p-2 border border-secondary text-white">Rol: Bodeguero</span>
+                </div>
 
-            <div class="control-busqueda">
-                <label for="filtrar-categoria">Filtrar por Categoría:</label>
-                <select id="filtrar-categoria">
-                    <option value="todas">Todas las categorías</option>
-                    <option value="Cat1">Categoría 1</option>
-                    <option value="Cat2">Categoría 2</option>
-                    <option value="Cat3">Categoría 3</option>
-                    <option value="Cat4">Categoría 4</option>
-                    <option value="Cat5">Categoría 5</option>
-                    <option value="Cat6">Categoría 6</option>
-                    <option value="Cat7">Categoría 7</option>
-                    <option value="Cat8">Categoría 8</option>
-                    <option value="Cat9">Categoría 9</option>
-                    <option value="Cat10">Categoría 10</option>
-                    <option value="Cat11">Categoría 11</option>
-                    <option value="Cat12">Categoría 12</option>
-                </select>
-            </div>
-        </section>
+                <div class="card card-custom p-4 mb-4">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-white-50 small fw-bold" for="buscar-nombre">Buscar Producto</label>
+                            <input type="text" class="form-control bg-dark text-white border-secondary" id="buscar-nombre" placeholder="Ej. Monitor, Teclado...">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-white-50 small fw-bold" for="filtrar-categoria">Filtrar por Categoría</label>
+                            <select class="form-select bg-dark text-white border-secondary" id="filtrar-categoria">
+                                <option value="todas">Todas las categorías</option>
+                                <option value="Monitores">Monitores</option>
+                                <option value="Teclados">Teclados y Ratones</option>
+                                <option value="Componentes">Componentes Internos</option>
+                                <option value="Almacenamiento">Almacenamiento</option>
+                                <option value="Redes">Redes y Conectividad</option>
+                                <option value="Audio">Equipos de Audio</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="seccion-catalogo">
-            <div class="cuadricula-productos" id="contenedor-tarjetas">
-            </div>
-        </section>
+                <div class="card card-custom p-4">
+                    <div class="cuadricula-productos row g-4" id="contenedor-tarjetas">
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
-    <script src="../js/ver-productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
-</html>
+</html> 

@@ -1,12 +1,78 @@
-<div class="crud-container">
-    <div class="crud-header">
-        <h2>Listado de Productos Tecnológicos</h2>
-        <button id="btn-crear" class="btn-primario" onclick="abrirFormularioCrear()">
-            + Crear Nuevo Producto
-        </button>
-        <button id="btn-crear" class="btn-primario" onclick="abrirFormularioActualizar()">
-            + Actualizar Producto
-        </button>
-        <button id="btn-crear" class="btn-primario" onclick="ejecutarEliminar()">
-            + Eliminar Productos
-        </button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoundInventory - Operaciones CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="row g-0">
+        <div class="col-md-3 col-lg-2">
+            <nav class="sidebar p-3">
+                 <div class="sidebar-wrapper">
+                    <div>
+                        <h4 class="text-music fw-bold text-center mb-4 mt-2">ZoundInventory</h4>
+                        <ul class="nav flex-column gap-2">
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="dashboard.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="perfil.html">Mi Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="proveedores.html">Proveedores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="alertas.html">Alertas Stock</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./actualizarproducto.html">Actualizar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./agregarproductos.html">Agregar Producto</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold bg-secondary bg-opacity-25 rounded p-2" href="./crud.html">CRUD</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./movimientos.html">Importadores</a></li>
+                            <li class="nav-item"><a class="nav-link text-white-50 p-2" href="./productos.html">Productos</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <a class="nav-link text-danger p-2 fw-bold text-center border border-danger border-opacity-25 rounded bg-danger bg-opacity-10" href="../index.html">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-md-9 col-lg-10 offset-md-3 offset-lg-2">
+            <main class="main-content-fluid">
+                <div class="d-flex justify-content-between align-items-center pb-2 mb-4 border-bottom border-secondary">
+                    <h1 class="h2 fw-bold">Mantenimiento de Inventario</h1>
+                    <span class="badge bg-music-dark p-2 border border-secondary text-white">Rol: Administrador</span>
+                </div>
+
+                <div class="card card-custom p-4">
+                    <h4 class="fw-bold mb-4 text-music">Listado de Productos Tecnológicos</h4>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <button class="btn btn-music px-4 py-2" onclick="abrirFormularioCrear()">+ Crear Nuevo Producto</button>
+                        <button class="btn btn-warning px-4 py-2" onclick="abrirFormularioActualizar()">Actualizar Producto</button>
+                        <button class="btn btn-danger px-4 py-2" onclick="ejecutarEliminar()">Eliminar Productos</button>
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                        <table class="table table-hover align-middle m-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCrud">
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted py-4">Sincronizando registros...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
